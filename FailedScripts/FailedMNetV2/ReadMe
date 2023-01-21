@@ -1,0 +1,2 @@
+This is the failed attempt at a MobileNet V2 neural network. It seems to train well enough, however, I didn't figure out the proper way to save teh model for export and 
+its structure now seems quite convoluted for me. It is worth reexamination at a later time. 
