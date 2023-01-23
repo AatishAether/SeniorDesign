@@ -1,4 +1,5 @@
 This is for newer scripts
 
 
-The second main.py is the latest rendition, but it is also buggy. Am currently working on it. -db
+~~The second main.py is the latest rendition, but it is also buggy. Am currently working on it. -db~~ 
+I believe that this latest main script works well. Find the .onnx files in SeniorDesign/CurrentScripts/Models/
