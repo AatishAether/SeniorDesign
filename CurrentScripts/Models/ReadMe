@@ -1,0 +1,2 @@
+FCNN.onnx and ImageClassifier.onnx are essentially the same model, however, they were saved slightly differently. I did this so that we could examine the possible 
+differences and advantages vs disadvantages of these saves. For more information on working with these models see: https://learn.microsoft.com/en-us/windows/ai/windows-ml/tutorials/pytorch-convert-model
