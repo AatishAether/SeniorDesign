@@ -1,1 +1,5 @@
 This is just a bit of experimentation with landmarks to see how exactly they work
+
+
+This code so far will only track the wrist landmark in space. Here is a site which will show you all the landmarks numbered: https://developers.google.com/mediapipe/solutions/vision/hand_landmarker/index#models
+
