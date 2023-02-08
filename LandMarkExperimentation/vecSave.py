@@ -13,3 +13,15 @@ def vecSave(d):
         angles.append(angle)
     return angles
 
+
+# The following is new code that really doesn't do much of what it should, but I am saving it as a starting point. 
+# def vecSave(d, num_frames_diff):
+#     saved_vectors = []
+#     for key in d:
+#         k = key + num_frames_diff
+#         if k in d:
+#             u = d[key]
+#             v = d[k]
+#             saved_vectors.append((u, v))
+#     print(saved_vectors)
+#     return saved_vectors
