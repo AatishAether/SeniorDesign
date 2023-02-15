@@ -1,0 +1,6 @@
+Here are some sources I used or am interested in looking into: https://towardsdatascience.com/custom-dataset-in-pytorch-part-1-images-2df3152895 
+https://pytorch.org/tutorials/recipes/recipes/defining_a_neural_network.html 
+https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear 
+https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d 
+https://discuss.pytorch.org/t/linear-layer-input-neurons-number-calculation-after-conv2d/28659 
+https://towardsdatascience.com/understanding-and-calculating-the-number-of-parameters-in-convolution-neural-networks-cnns-fc88790d530d 
