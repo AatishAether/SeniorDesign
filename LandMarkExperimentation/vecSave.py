@@ -1,21 +1,8 @@
-# --Here is the newest code, which does work to calculate the angles. 
 import numpy as np
 
-def vecSave(vecList):
-    # saved_vectors = []
-    # for key in d:
-    #     k = key + num_frames_diff
-    #     if k in d:
-    #         u = d[key]
-    #         v = d[k]
-    #         saved_vectors.append((u, v))
-    # print(saved_vectors)
-    # print(vecList[len(vecList) - 2])
-    # print(vecList[len(vecList) - 1])
-    #
-    # print(vecList[len(vecList) - 2][0])
-    # print(vecList[len(vecList) - 2][4])
+returns = []
 
+def vecSave(vecList):
     dict1 = {
         0: vecList[len(vecList) - 2][0],
         1: vecList[len(vecList) - 2][1],
@@ -31,50 +18,36 @@ def vecSave(vecList):
         4: vecList[len(vecList) - 1][4]
     }
 
-    angles = []
-
+    angle_threshold = 5
     for key in dict1:
-        dp = np.dot(dict1[key], dict2[key])
-
-        mult = np.linalg.norm(dict1[key]) * np.linalg.norm(dict2[key])
-        angle = np.arccos(dp/mult)
-
-
-        if angle * 100 > 5:
-            print("Check Image for " + str(key) + "!")
+        vec1 = dict1[key]
+        vec2 = dict2[key]
+        dp = np.dot(vec1, vec2)
+        mag1 = np.linalg.norm(vec1)
+        mag2 = np.linalg.norm(vec2)
+        cos_angle = dp / (mag1 * mag2)
+        angle = np.arccos(cos_angle) * 180 / np.pi  # convert to degrees
+        if angle > angle_threshold:
+            returns.append("Check Image for " + str(key) + "!")
             return 1
-        else:
-            return 2
+            # print(f"Check Image for finger {key}! Angle: {angle:.2f} degrees")
+
+
+
+        # dp = np.dot(dict1[key], dict2[key])
+        #
+        # mult = np.linalg.norm(dict1[key]) * np.linalg.norm(dict2[key])
+        # angle = np.arccos(dp/mult)
+        #
+        #
+        # if angle * 100 > 10:
+        #     print("Check Image for " + str(key) + "!")
+        #     return 1
+        # else:
+        #     return 2
+        #     # angles.append(angle * 100)
 
         # angles.append(angle * 100)
+        # return 2 if all(angle <= 10 for angle in angles) else 1
 
     # return angles
-    
-# --This is the oldest code--
-# import cv2
-# import mediapipe as mp
-# import numpy
-# import numpy as np
-
-# def vecSave(d):
-#     sDict = d.copy()
-#     angles = []
-#     for key in d:
-#         dp = abs(numpy.dot(d[key], sDict[key]))
-#         mult = abs(numpy.dot(d[key])) * abs(numpy.dot(sDict[key]))
-#         angle = numpy.arccos(dp/mult)
-#         angles.append(angle)
-#     return angles
-
-
-# The following is new code that really doesn't do much of what it should, but I am saving it as a starting point. 
-# def vecSave(d, num_frames_diff):
-#     saved_vectors = []
-#     for key in d:
-#         k = key + num_frames_diff
-#         if k in d:
-#             u = d[key]
-#             v = d[k]
-#             saved_vectors.append((u, v))
-#     print(saved_vectors)
-#     return saved_vectors
