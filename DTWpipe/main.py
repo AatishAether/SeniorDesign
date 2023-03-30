@@ -19,13 +19,13 @@ mp_drawing_styles = mp.solutions.drawing_styles
 def main():
     # Create dataset of the videos where landmarks have not been extracted yet
     print("Reading Dataset...")
-    dataset = load_dataset()
+    n,dataset = load_dataset()
 
     # Create a DataFrame of reference signs (name: str, model: SignModel, distance: int)
     ##I think this is cause a huge bog down. If we can save the reference signs dataFrame
     ##This can save time
     print("Loading Signs...")
-    if not (os.path.exists("./referenceSigns.pickle")):
+    if not (os.path.exists("./referenceSigns.pickle")) or (n > 0):
         reference_signs = load_reference_signs(dataset)
 
         reference_signs.to_pickle('./referenceSigns.pickle')
