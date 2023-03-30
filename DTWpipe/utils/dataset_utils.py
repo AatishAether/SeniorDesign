@@ -30,7 +30,7 @@ def load_dataset():
         for idx in tqdm(range(n)):
             save_landmarks_from_video(videos_not_in_dataset[idx])
 
-    return dataset
+    return (n,dataset)
 
 
 def load_reference_signs(videos):
