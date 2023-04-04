@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d76354ce-dbc8-4ec0-a1fc-54a1d952b5b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DTWpipe/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DTWpipe/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTWpipe/webcam_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DTWpipe/webcam_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/David GUI New/Gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/DTWpipe/Gui.py" afterDir="false" />
-    </list>
+    <list default="true" id="d76354ce-dbc8-4ec0-a1fc-54a1d952b5b1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +39,30 @@
       <recent name="C:\Users\EEG\Documents\GitHub\SeniorDesign\DTWpipe" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="socket" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\EEG\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (pythonProject)" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/GUIsocket/DTWpipe" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/GUIsocket/DTWpipe/socket.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,7 +79,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DTWpipe/webcam_manager.py</url>
-          <line>12</line>
+          <line>11</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
