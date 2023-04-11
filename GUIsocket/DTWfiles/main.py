@@ -22,14 +22,24 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 #mp_hands = mp.solutions.hands
 
-def main():
-    print("Trying to start sender....")
-    sender = imagezmq.ImageSender(connect_to="tcp://127.0.0.1:6008:9732")
-    rpiName = socket.gethostname()
-    time.sleep(2.0)
+#imageHub = imagezmq.ImageHub()
 
-    # Create dataset of the videos where landmarks have not been extracted yet
-    print("Reading Dataset...")
+def main():
+    # print("Trying to start sender....")
+    # # sender = imagezmq.ImageSender(connect_to="tcp://127.0.0.1:6008")
+    # # rpiName = socket.gethostname()
+    # # time.sleep(2.0)
+    #
+    #
+    # # Create dataset of the videos where landmarks have not been extracted yet
+    # print("Reading Dataset...")
+
+    sock = socket.socket()
+    sock.connect(("localhost", 5555))
+
+        #filename1 = "./image.bin"   # save data as bin file
+        #bin_file = image.tofile(filename1)
+
     dataset = load_dataset()
 
     # Create a DataFrame of reference signs (name: str, model: SignModel, distance: int)
@@ -71,9 +81,17 @@ def main():
             sign_detected, is_recording = sign_recorder.process_results(results)
 
             # Update the frame (draw landmarks & display result)
-            webcam_manager.update(frame, results, sign_detected, is_recording)
+            newFrame = webcam_manager.update(frame, results, sign_detected, is_recording)
 
-            sender.send_image(rpiName,frame)
+            bin_file = frame.tofile("C:\\Users\\david\\Desktop\\DTWpipe\\data.bin")
+
+            with open("C:\\Users\\david\\Desktop\\DTWpipe\\data.bin", "rb") as fd:
+                buf = fd.read(1024)
+                sock.send(buf)
+                buf = fd.read(1024)
+
+            #(rpiName,frame) = imageHub.recv_image()
+            # sender.send_image(rpiName,frame)
 
             pressedKey = cv2.waitKey(1) & 0xFF
             if pressedKey == ord("r"):  # Record pressing r
