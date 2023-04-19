@@ -63,10 +63,10 @@ class ASLDataset(torch.utils.data.Dataset): # inheritin from Dataset class
             image = self.transform(image)
         return image, label #class_index , class_name
 
-train_dataset = ASLDataset('./train.csv') #, train_transform)
+train_dataset = ASLDataset('./CSV/train.csv') #, train_transform)
 train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
 
-val_dataset = ASLDataset('./test.csv')  # val.csv
+val_dataset = ASLDataset('./CSV/test.csv')  # val.csv
 val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
 
 classes = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'nothing', 'O', 'P', 'Q', 'R', 'S', 'space', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z')
@@ -272,7 +272,7 @@ def testBatch():
     outputs = model(images)
 
     # We got the probability for every 10 labels. The highest (max) probability should be correct label
-    _, predicted = torch.max(outputs, 1)
+    _, predicted = torch.max(outputs.data, 1)
 
     # Let's show the predicted labels on the screen to compare with the real ones
     print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
@@ -319,7 +319,7 @@ def Convert_ONNX2():
 
 if __name__ == "__main__":
     # Let's build our model
-    train(5)
+    train(1)
     print('Finished Training')
 
     # Test which classes performed well
