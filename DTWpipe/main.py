@@ -74,7 +74,7 @@ def main():
                 #features = features.replace("'",'')
                 #features = list(features.split(","))
                 #features = list(map(float,features))
-                with open("features6.pickle", "wb") as f:
+                with open("A1.pickle", "wb") as f:
                     pickle.dump(features,f)
 
         cap.release()

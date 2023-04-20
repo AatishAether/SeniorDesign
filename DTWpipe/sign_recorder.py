@@ -18,7 +18,7 @@ class SignRecorder(object):
 
         # DataFrame storing the distances between the recorded sign & all the reference signs from the dataset
         self.reference_signs = reference_signs
-        #self.recorded_sign = SignModel()
+        self.recorded_sign = SignModel()
         
 
     def record(self):
@@ -109,7 +109,7 @@ class SignRecorder(object):
         # Count the occurrences of each sign and sort them by descending order
         sign_counter = Counter(sign_names).most_common()
 
-        #predicted_sign, count = sign_counter[0]
-        #if count / batch_size < threshold:
-        #    return "Unknown Sign"
+        predicted_sign, count = sign_counter[0]
+        if count / batch_size < threshold:
+            return "Unknown Sign"
         return sign_counter[0][0]
