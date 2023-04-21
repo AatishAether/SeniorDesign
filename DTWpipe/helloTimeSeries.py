@@ -7,46 +7,50 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 
-with open("features1.pickle",'rb') as f:
-    ts1 = pickle.load(f)
 
+import os
+#with open("features1.pickle",'rb') as f:
+#    ts1 = pickle.load(f)
+#
+#
+#with open("features2.pickle",'rb') as f:
+#    ts2 = pickle.load(f)
+#
+#
+#with open("features3.pickle",'rb') as f:
+#    ts3 = pickle.load(f)
+#
+#
+#with open("features4.pickle",'rb') as f:
+#    ts4 = pickle.load(f)
+#
+#with open("features5.pickle",'rb') as f:
+#    ts5 = pickle.load(f)
+#
+#with open("features6.pickle",'rb') as f:
+#    ts6 = pickle.load(f)
 
-with open("features2.pickle",'rb') as f:
-    ts2 = pickle.load(f)
+##Iterate through clusterAnalysis folder and load all pickle files into array
+cluster = []
+for filename in os.listdir("clusterAnalysis/cluster1"):
+    if(filename.endswith(".pickle")):
+        with open("./clusterAnalysis/cluster1/"+filename,'rb') as f:
+            data = pickle.load(f)
+            data = to_time_series(data)
+            cluster.append(data)
 
+clusterDataset = to_time_series_dataset(cluster)
 
-with open("features3.pickle",'rb') as f:
-    ts3 = pickle.load(f)
-
-
-with open("features4.pickle",'rb') as f:
-    ts4 = pickle.load(f)
-
-with open("features5.pickle",'rb') as f:
-    ts5 = pickle.load(f)
-
-with open("features6.pickle",'rb') as f:
-    ts6 = pickle.load(f)
-
-
-#Train
-dataset1 = to_time_series(ts1)
-dataset2 = to_time_series(ts2)
-dataset3 = to_time_series(ts3)
-dataset4 = to_time_series(ts4)
-
-#Test
-dataset5 = to_time_series(ts5)
-dataset6 = to_time_series(ts6)
-
-formatted_data = to_time_series_dataset([dataset1,dataset2,dataset3,dataset4])
+print(clusterDataset.shape)
 
 #print(dataset1.shape)
 #print(formatted_data.shape)
 
-x = formatted_data
-y = dataset5
-n_clusters = 2
+x = clusterDataset
+y = cluster[-1]
+n_clusters = 5
+
+print(f'x : {x}')
 #km = TimeSeriesKMeans(n_clusters=2, metric="dtw")
 #labels = km.fit_predict(x)
 km_bis = TimeSeriesKMeans(n_clusters=n_clusters, metric="softdtw")
