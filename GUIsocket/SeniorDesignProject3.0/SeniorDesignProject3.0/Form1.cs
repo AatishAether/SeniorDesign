@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,11 +25,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Forms.VisualStyles;
+using Windows.Storage.Streams;
+using System.Diagnostics.Tracing;
+using System.Net.WebSockets;
 
 namespace SeniorDesignProject3._0
 {
     public partial class Form1 : Form
     {
+        ArgumentException ex;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +45,7 @@ namespace SeniorDesignProject3._0
         public void DTW()
         {
             string progToRun = @"C:\Users\david\Desktop\DTWpipe\main.py";
+            //string progToRun = @"C:\Users\david\Desktop\Test\test.py";
             Process proc = new Process();
             proc.StartInfo.FileName = "python.exe";
             proc.StartInfo.RedirectStandardOutput = true;
@@ -52,82 +60,62 @@ namespace SeniorDesignProject3._0
 
         public void getFrames()
         {
-            Bitmap MyImage;
-            
-            Console.WriteLine("Here 1");
-            IPEndPoint iep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5555);
-               using (Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
+            //create a TCP socket
+            Console.WriteLine("Creating the socket...");
+            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPAddress ipAddress = IPAddress.Parse("172.16.206.245");
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 1234);
+            socket.Bind(localEndPoint);
+            socket.Listen(1);
+            Socket clientSocket = socket.Accept();
+            Console.WriteLine("Connected!");
+
+            while (true)
+            {
+                Console.WriteLine("Trying..");
+                byte[] buffer = new byte[1000000];
+                Console.WriteLine("I am");
+                int bytesRead = clientSocket.Receive(buffer);
+                Console.WriteLine("Working...");
+                byte[] imageData = new byte[bytesRead];
+                Array.Copy(buffer, imageData, bytesRead);
+                using (MemoryStream ms = new MemoryStream(imageData))
                 {
-                    client.Connect(iep);
-
-                    // receive data
-                    byte[] buffer = new byte[1000000];
-                    while (true) { 
-                        client.Receive(buffer, buffer.Length, SocketFlags.None);
-                        Console.WriteLine("Receive success");
-
-                    //File.WriteAllBytes("C:\\users\\david\\desktop\\1.jpg", buffer);
-                    //Image image = Image.FromFile("C:\\users\\david\\desktop\\1.jpg");
-
                     try
                     {
-
-                        byte[] oByteArray = File.ReadAllBytes("C:\\Users\\david\\Desktop\\DTWpipe\\data.bin");
-                        Image image = (Image)(BitmapImage2Bitmap(ConvertToImage(oByteArray)));
-
+                        Image image = Image.FromStream(ms);
                         pictureBox1.Image = image;
-
-                    } catch(NotSupportedException)
+                        Console.WriteLine("Image being Display..");
+                    }
+                    catch (ArgumentException ex)
                     {
-
-
-
+                        Console.WriteLine(ex.Message);
                     }
 
-
                 }
+
             }
+
         }
 
-        private Bitmap BitmapImage2Bitmap(BitmapImage bitmapImage)
-        {
-            // BitmapImage bitmapImage = new BitmapImage(new Uri("../Images/test.png", UriKind.Relative));
-
-            using (MemoryStream outStream = new MemoryStream())
-            {
-                BitmapEncoder enc = new BmpBitmapEncoder();
-                enc.Frames.Add(BitmapFrame.Create(bitmapImage));
-                enc.Save(outStream);
-                System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(outStream);
-
-                return new Bitmap(bitmap);
-            }
-        }
-
-        public BitmapImage ConvertToImage(byte[] Binary)
-        {
-
-            byte[] buffer = Binary.ToArray();
-            MemoryStream stream = new MemoryStream(buffer);
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.StreamSource = stream;
-            image.EndInit();
-            return image;
-        }
 
         void button1_Click(object sender, EventArgs e)
-            {
-                Task task1 = Task.Factory.StartNew(() => DTW());
-                Thread.Sleep(10000);
-                Task task2 = Task.Factory.StartNew(() => getFrames());
-
-            }
-
-            void pictureBox1_Click(object sender, EventArgs e)
-            {
+        {
 
 
-            }
+            Task task2 = Task.Factory.StartNew(() => getFrames());
+            Thread.Sleep(1000);
+            Task task1 = Task.Factory.StartNew(() => DTW());
+
+
+
+
+        }
+
+        void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
+}
