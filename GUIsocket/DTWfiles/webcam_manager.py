@@ -1,12 +1,15 @@
 import cv2
 import numpy as np
 import mediapipe as mp
-
-from imutils.video import VideoStream
-import imagezmq
 import argparse
-import socket
+import tkinter as tk
+from tkinter import messagebox
 import time
+import datetime
+import time
+from time import ctime
+import _thread
+import socket
 
 WHITE_COLOR = (245, 242, 226)
 RED_COLOR = (25, 35, 240)
@@ -25,7 +28,6 @@ class WebcamManager(object):
     def update(
         self, frame: np.ndarray, results, sign_detected: str, is_recording: bool
     ):
-
         self.sign_detected = sign_detected
 
         # Draw landmarks
@@ -49,7 +51,7 @@ class WebcamManager(object):
         # Update the frame
         cv2.circle(frame, (30, 30), 20, color, -1)
         #cv2.imshow("OpenCV Feed", frame)
-
+        return frame
 
     def draw_text(
         self,
