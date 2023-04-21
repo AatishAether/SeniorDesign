@@ -41,14 +41,14 @@ for filename in os.listdir("clusterAnalysis/cluster1"):
 
 clusterDataset = to_time_series_dataset(cluster)
 
-print(clusterDataset.shape)
+#print(clusterDataset.shape)
 
 #print(dataset1.shape)
 #print(formatted_data.shape)
 
 x = clusterDataset
 y = cluster[-1]
-n_clusters = 5
+n_clusters = 3
 
 print(f'x : {x}')
 #km = TimeSeriesKMeans(n_clusters=2, metric="dtw")
