@@ -5,6 +5,11 @@ import pickle
 import pandas as pd
 
 import re
+import imagiz
+import zlib
+import struct
+import time
+import io
 
 from utils.dataset_utils import load_dataset, load_reference_signs
 from utils.mediapipe_utils import mediapipe_detection
@@ -12,34 +17,23 @@ from sign_recorder import SignRecorder
 from webcam_manager import WebcamManager
 
 from imutils.video import VideoStream
-import imagezmq
-import argparse
 import socket
 import time
 from threading import Thread
 
+
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
-#mp_hands = mp.solutions.hands
+mp_hands = mp.solutions.hands
 
-#imageHub = imagezmq.ImageHub()
+# sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_address = ('172.16.206.245', 1234)
+# sock.connect(server_address)
+
 
 def main():
-    # print("Trying to start sender....")
-    # # sender = imagezmq.ImageSender(connect_to="tcp://127.0.0.1:6008")
-    # # rpiName = socket.gethostname()
-    # # time.sleep(2.0)
-    #
-    #
-    # # Create dataset of the videos where landmarks have not been extracted yet
-    # print("Reading Dataset...")
-
-    sock = socket.socket()
-    sock.connect(("localhost", 5555))
-
-        #filename1 = "./image.bin"   # save data as bin file
-        #bin_file = image.tofile(filename1)
-
+    # Create dataset of the videos where landmarks have not been extracted yet
+    print("Reading Dataset...")
     dataset = load_dataset()
 
     # Create a DataFrame of reference signs (name: str, model: SignModel, distance: int)
@@ -64,13 +58,16 @@ def main():
     webcam_manager = WebcamManager()
 
     # Turn on the webcam
-    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
     # Set up the Mediapipe environment
     with mp.solutions.holistic.Holistic(
         min_detection_confidence=0.5, min_tracking_confidence=0.5
     ) as holistic:
-        while cap.isOpened():
 
+        while cap.isOpened():
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            server_address = ('172.16.206.245', 1234)
+            sock.connect(server_address)
             # Read feed
             ret, frame = cap.read()
 
@@ -83,15 +80,15 @@ def main():
             # Update the frame (draw landmarks & display result)
             newFrame = webcam_manager.update(frame, results, sign_detected, is_recording)
 
-            bin_file = frame.tofile("C:\\Users\\david\\Desktop\\DTWpipe\\data.bin")
 
-            with open("C:\\Users\\david\\Desktop\\DTWpipe\\data.bin", "rb") as fd:
-                buf = fd.read(1024)
-                sock.send(buf)
-                buf = fd.read(1024)
+            cv2.imwrite("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", newFrame)
 
-            #(rpiName,frame) = imageHub.recv_image()
-            # sender.send_image(rpiName,frame)
+            with open("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", 'rb') as f:
+                image_data = f.read()
+                sock.sendall(image_data)
+                image_data = sock.recv(1024)
+            f.close()
+
 
             pressedKey = cv2.waitKey(1) & 0xFF
             if pressedKey == ord("r"):  # Record pressing r
@@ -107,6 +104,7 @@ def main():
                 #features = list(map(float,features))
                 with open("features6.pickle", "wb") as f:
                     pickle.dump(features,f)
+            continue
 
         cap.release()
         cv2.destroyAllWindows()
