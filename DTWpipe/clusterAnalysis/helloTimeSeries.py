@@ -32,9 +32,9 @@ import os
 
 ##Iterate through clusterAnalysis folder and load all pickle files into array
 cluster = []
-for filename in os.listdir("clusterAnalysis/cluster1"):
+for filename in os.listdir("./cluster1"):
     if(filename.endswith(".pickle")):
-        with open("./clusterAnalysis/cluster1/"+filename,'rb') as f:
+        with open("./cluster1/"+filename,'rb') as f:
             data = pickle.load(f)
             data = to_time_series(data)
             cluster.append(data)
