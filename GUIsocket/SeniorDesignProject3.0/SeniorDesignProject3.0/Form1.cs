@@ -76,20 +76,25 @@ namespace SeniorDesignProject3._0
                 byte[] buffer = new byte[1000000];
                 Console.WriteLine("I am");
                 int bytesRead = clientSocket.Receive(buffer);
-                Console.WriteLine("Working...");
-                byte[] imageData = new byte[bytesRead];
-                Array.Copy(buffer, imageData, bytesRead);
-                using (MemoryStream ms = new MemoryStream(imageData))
+                while (bytesRead != 0)
                 {
-                    try
+                    Console.WriteLine("Working...");
+                    byte[] imageData = new byte[bytesRead];
+                    Array.Copy(buffer, imageData, bytesRead);
+                    using (MemoryStream ms = new MemoryStream(imageData))
                     {
-                        Image image = Image.FromStream(ms);
-                        pictureBox1.Image = image;
-                        Console.WriteLine("Image being Display..");
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        Console.WriteLine(ex.Message);
+                        try
+                        {
+                            Image image = Image.FromStream(ms);
+                            pictureBox1.Image = image;
+                            Console.WriteLine("Image being Display..");
+                            break;
+                        }
+                        catch (ArgumentException ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
                     }
 
                 }
