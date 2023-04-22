@@ -1,126 +1,117 @@
-using System;
-using System.Diagnostics;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net;
-using System.Net.Sockets;
-using System.IO;
-using System.Threading;
-using System.Windows.Media.Imaging;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Imaging;
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Forms.VisualStyles;
-using Windows.Storage.Streams;
-using System.Diagnostics.Tracing;
-using System.Net.WebSockets;
+import cv2
+import mediapipe as mp
+import os
+import pickle
+import pandas as pd
 
-namespace SeniorDesignProject3._0
-{
-    public partial class Form1 : Form
-    {
-        ArgumentException ex;
+import re
+import imagiz
+import zlib
+import struct
+import time
+import io
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
+from utils.dataset_utils import load_dataset, load_reference_signs
+from utils.mediapipe_utils import mediapipe_detection
+from sign_recorder import SignRecorder
+from webcam_manager import WebcamManager
 
-        public void DTW()
-        {
-            string progToRun = @"C:\Users\david\Desktop\DTWpipe\main.py";
-            //string progToRun = @"C:\Users\david\Desktop\Test\test.py";
-            Process proc = new Process();
-            proc.StartInfo.FileName = "python.exe";
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.UseShellExecute = false;
-            proc.StartInfo.CreateNoWindow = true;
-
-            // call hello.py to concatenate passed parameters
-            proc.StartInfo.Arguments = string.Concat(progToRun);
-
-            proc.Start();
-        }
-
-        public void getFrames()
-        {
-            //create a TCP socket
-            Console.WriteLine("Creating the socket...");
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress ipAddress = IPAddress.Parse("172.16.206.245");
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 1234);
-            socket.Bind(localEndPoint);
-            socket.Listen(1);
-            Socket clientSocket = socket.Accept();
-            Console.WriteLine("Connected!");
-
-            while (true)
-            {
-                Console.WriteLine("Trying..");
-                byte[] buffer = new byte[1000000];
-                Console.WriteLine("I am");
-                int bytesRead = clientSocket.Receive(buffer);
-                while (bytesRead != 0)
-                {
-                    Console.WriteLine("Working...");
-                    byte[] imageData = new byte[bytesRead];
-                    Array.Copy(buffer, imageData, bytesRead);
-                    using (MemoryStream ms = new MemoryStream(imageData))
-                    {
-                        try
-                        {
-                            Image image = Image.FromStream(ms);
-                            pictureBox1.Image = image;
-                            Console.WriteLine("Image being Display..");
-                            break;
-                        }
-                        catch (ArgumentException ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-
-                    }
-
-                }
-
-            }
-
-        }
+from imutils.video import VideoStream
+import socket
+import time
+from threading import Thread
 
 
-        void button1_Click(object sender, EventArgs e)
-        {
+mp_drawing = mp.solutions.drawing_utils
+mp_drawing_styles = mp.solutions.drawing_styles
+mp_hands = mp.solutions.hands
 
+# sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_address = ('172.16.206.245', 1234)
+# sock.connect(server_address)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_address = ('172.16.206.245', 1234)
+sock.connect(server_address)
+sock.setblocking(False)
 
-            Task task2 = Task.Factory.StartNew(() => getFrames());
-            Thread.Sleep(1000);
-            Task task1 = Task.Factory.StartNew(() => DTW());
+def main():
+    # Create dataset of the videos where landmarks have not been extracted yet
+    print("Reading Dataset...")
+    dataset = load_dataset()
+
+    # Create a DataFrame of reference signs (name: str, model: SignModel, distance: int)
+    ##I think this is cause a huge bog down. If we can save the reference signs dataFrame
+    ##This can save time
+    print("Loading Signs...")
+    if not (os.path.exists("./referenceSigns.pickle")):
+        reference_signs = load_reference_signs(dataset)
+
+        reference_signs.to_pickle('./referenceSigns.pickle')
+
+    else:
+        reference_signs = pd.read_pickle('./referenceSigns.pickle')
 
 
 
+    print("Creating Sign Recorder object")
+    # Object that stores mediapipe results and computes sign similarities
+    sign_recorder = SignRecorder(reference_signs)
 
-        }
+    # Object that draws keypoints & displays results
+    webcam_manager = WebcamManager()
 
-        void pictureBox1_Click(object sender, EventArgs e)
-        {
+    # Turn on the webcam
+    cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
+    # Set up the Mediapipe environment
+    with mp.solutions.holistic.Holistic(
+        min_detection_confidence=0.5, min_tracking_confidence=0.5
+    ) as holistic:
+
+        count = 0
+
+        while cap.isOpened():
+            ret, frame = cap.read()
+
+            # Make detections
+            image, results = mediapipe_detection(frame, holistic)
+
+            # Process results
+            sign_detected, is_recording = sign_recorder.process_results(results)
+
+            # Update the frame (draw landmarks & display result)
+            newFrame = webcam_manager.update(frame, results, sign_detected, is_recording)
 
 
-        }
-    }
-}
+            #cv2.imwrite("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend%d.png" % count, newFrame)
+            cv2.imwrite("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", newFrame)
+
+            #f = open("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend" + str(count) + ".png", 'rb')
+            f = open("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", 'rb')
+            image_data = f.read()
+            sock.sendall(image_data)
+            f.close()
+
+            count = count + 1
+
+            pressedKey = cv2.waitKey(1) & 0xFF
+            if pressedKey == ord("r"):  # Record pressing r
+                sign_recorder.record()
+            elif pressedKey == ord("q"):  # Break pressing q
+                break
+            elif pressedKey == ord('p'): ##Print to file
+                features = sign_recorder.recorded_sign.lh_embedding
+                #features = str(features).replace('[','')
+                #features = features.replace(']','')
+                #features = features.replace("'",'')
+                #features = list(features.split(","))
+                #features = list(map(float,features))
+                with open("features6.pickle", "wb") as f:
+                    pickle.dump(features,f)
+            continue
+
+        cap.release()
+        cv2.destroyAllWindows()
+
+
+if __name__ == "__main__":
+    main()
