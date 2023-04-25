@@ -8,7 +8,7 @@ from utils.landmark_utils import extract_landmarks
 
 
 class SignRecorder(object):
-    def __init__(self, reference_signs: pd.DataFrame, seq_len=50):
+    def __init__(self, reference_signs: pd.DataFrame, seq_len=40):
         # Variables for recording
         self.is_recording = False
         self.seq_len = seq_len
@@ -30,7 +30,7 @@ class SignRecorder(object):
         self.reference_signs["distance"].values[:] = 0
         self.is_recording = True
 
-    def process_results(self, results) -> (str, bool):
+    def process_results(self, results) :
         """
         If the SignRecorder is in the recording state:
             it stores the landmarks during seq_len frames and then computes the sign distances
@@ -106,11 +106,10 @@ class SignRecorder(object):
         """
         # Get the list (of size batch_size) of the most similar reference signs
         sign_names = self.reference_signs.iloc[:batch_size]["name"].values
-
         # Count the occurrences of each sign and sort them by descending order
         sign_counter = Counter(sign_names).most_common()
 
         predicted_sign, count = sign_counter[0]
         if count / batch_size < threshold:
             return "Unknown Sign"
-        return predicted_sign
+        return sign_counter[0][0]

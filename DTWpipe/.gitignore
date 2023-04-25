@@ -10,16 +10,19 @@
 # ignore all files in any directory named build
 build/
 
+venv/
+virtualenv/
+
+*/__pycache__/
+
+*.swp
+.zip
+*.git
+
 # ignore doc/notes.txt, but not doc/server/arch.txt
 doc/*.txt
 
 # ignore all .pdf files in the doc/ directory and any of its subdirectories
 doc/**/*.pdf
 
-venv/
-virtualenv/
-
-__pycache__/
-
-*.swp
-*.git
+referenceSigns.pickle
