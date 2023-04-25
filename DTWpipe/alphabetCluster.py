@@ -25,20 +25,22 @@ for root, dirs, files in os.walk("./data/dataset"):
                 data = to_time_series(data)
                 cluster.append(data)
 
-comparison = []
+with open("openHand.pickle",'rb') as f:
+    open_hand = pickle.load(f)
+    comparison = to_time_series(open_hand)
 #print(clusterDataset.shape)
-for root,dirs,files in os.walk("./data/dataset/B"):
-    for name in files:
-        if(name.endswith(".pickle")):
-            if(name.startswith("pose")):
-                print(name)
-                continue
-            with open(os.path.join(root,name),'rb') as f:
-                data = pickle.load(f)
-                if(not np.any(data)):
-                    continue
-                data = to_time_series(data)
-                comparison.append(data)
+#for root,dirs,files in os.walk("./data/dataset/B"):
+#    for name in files:
+#        if(name.endswith(".pickle")):
+#            if(name.startswith("pose")):
+#                print(f'Ignoring {name}')
+#                continue
+#            with open(os.path.join(root,name),'rb') as f:
+#                data = pickle.load(f)
+#                if(not np.any(data)):
+#                    continue
+#                data = to_time_series(data)
+#                comparison.append(data)
 #print(dataset1.shape)
 #print(formatted_data.shape)
 clusterDataset = to_time_series_dataset(cluster)
