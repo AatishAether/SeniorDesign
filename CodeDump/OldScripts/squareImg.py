@@ -1,6 +1,8 @@
+##Detect a hand within an image and crop the image to be square around the hand
 import numpy as np
 import cv2
 import os
+import mediapipe as mp
 
 
 img = cv2.imread('./IMGS/test/ILSVRC2012_test_00000003.JPEG', cv2.IMREAD_COLOR)
