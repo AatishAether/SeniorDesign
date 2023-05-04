@@ -30,7 +30,7 @@ mp_hands = mp.solutions.hands
 # server_address = ('172.16.206.245', 1234)
 # sock.connect(server_address)
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('192.168.56.1', 1234)
+server_address = ('172.19.32.1', 1234)
 sock.connect(server_address)
 sock.setblocking(False)
 
@@ -79,18 +79,18 @@ def main():
             # Update the frame (draw landmarks & display result)
             newFrame = webcam_manager.update(frame, results, sign_detected, is_recording)
 
-            cv2.imwrite("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", newFrame)
-            f = open("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", 'rb')
+            cv2.imwrite("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\DWork\\DTWpipe\\frameToSend.png", newFrame)
+            f = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\DWork\\DTWpipe\\frameToSend.png", 'rb')
             image_data = f.read()
             sock.sendall(image_data)
             f.close()
 
-            ActionFile = open("C:\\Users\\david\\Desktop\\DTWpipe\\action.txt", 'r')
+            ActionFile = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\DWork\\DTWpipe\\action.txt", 'r')
             Action = ActionFile.read(1)
             ActionFile.close()
-            ActionFile = open("C:\\Users\\david\\Desktop\\DTWpipe\\action.txt", 'w'). close()
+            ActionFile = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\DWork\\DTWpipe\\action.txt", 'w'). close()
 
-            f = open("C:\\Users\\david\\Desktop\\DTWpipe\\translated_text.txt", "w")
+            f = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\DWork\\DTWpipe\\translated_text.txt", "w")
             f.write("Text: " + sign_detected)
             f.close()
 

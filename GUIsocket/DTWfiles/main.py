@@ -5,7 +5,7 @@ import pickle
 import pandas as pd
 
 import re
-import imagiz
+# import imagiz
 import zlib
 import struct
 import time
@@ -37,7 +37,7 @@ mp_hands = mp.solutions.hands
 # sock.setblocking(False)
 
 image_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ("172.16.206.245", 1234)
+server_address = ("172.19.32.1", 1234)
 image_sock.connect(server_address)
 image_sock.setblocking(0)
 
@@ -77,7 +77,7 @@ def main():
     webcam_manager = WebcamManager()
 
     # Turn on the webcam
-    cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     # Set up the Mediapipe environment
     with mp.solutions.holistic.Holistic(
         min_detection_confidence=0.5, min_tracking_confidence=0.5

@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 
 import re
-import imagiz
+# import imagiz
 import zlib
 import struct
 import time
@@ -23,21 +23,21 @@ class SocketManager(object):
 
     def image_to_gui(self, sock, NewFrame):
             # Sending the frames over to the C# GUI
-            cv2.imwrite("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", NewFrame)
-            f = open("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", 'rb')
+            cv2.imwrite("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\GUIsocket\\DTWfiles\\frameToSend.png", NewFrame)
+            f = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\GUIsocket\\DTWfiles\\frameToSend.png", 'rb')
             image_data = f.read()
             sock.sendall(image_data)
             f.close()
 
     def new_action(self):
-            ActionFile = open("C:\\Users\\david\\Desktop\\DTWpipe\\action.txt", 'r')
+            ActionFile = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\GUIsocket\\DTWfiles\\action.txt", 'r')
             new_action = ActionFile.read(1)
             ActionFile.close()
-            ActionFile = open("C:\\Users\\david\\Desktop\\DTWpipe\\action.txt", 'w'). close()
+            ActionFile = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\GUIsocket\\DTWfiles\\action.txt", 'w'). close()
             return new_action
 
     def text_to_file(self, sign_detected):
-            f = open("C:\\Users\\david\\Desktop\\DTWpipe\\translated_text.txt", "w")
+            f = open("C:\\Users\\EEG\\Documents\\GitHub\\SeniorDesign\\GUIsocket\\DTWfiles\\translated_text.txt", "w")
             f.writelines("Reading Sign: " + sign_detected)
             f.close()
 
