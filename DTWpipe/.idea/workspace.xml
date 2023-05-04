@@ -5,9 +5,134 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ee68a5d-23f7-42ab-a26c-ed6342c502f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helloTimeSeries.py" beforeDir="false" afterPath="$PROJECT_DIR$/helloTimeSeries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../referenceSigns.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../referenceSigns.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/DTWpipe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameToSend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_socket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translated_text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webcam_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcam_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/.idea/DTWfiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/.idea/DTWfiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-25/lh_A-25.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-25/lh_A-25.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-25/pose_A-25.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-25/pose_A-25.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-25/rh_A-25.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-25/rh_A-25.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-26/lh_A-26.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-26/lh_A-26.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-26/pose_A-26.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-26/pose_A-26.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-26/rh_A-26.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-26/rh_A-26.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-28/lh_A-28.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-28/lh_A-28.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-28/pose_A-28.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-28/pose_A-28.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-28/rh_A-28.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-28/rh_A-28.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-29/lh_A-29.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-29/lh_A-29.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-29/pose_A-29.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-29/pose_A-29.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-29/rh_A-29.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-29/rh_A-29.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-30/lh_A-30.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-30/lh_A-30.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-30/pose_A-30.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-30/pose_A-30.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-30/rh_A-30.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-30/rh_A-30.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-31/lh_A-31.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-31/lh_A-31.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-31/pose_A-31.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-31/pose_A-31.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-31/rh_A-31.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/A/A-31/rh_A-31.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-1/lh_father-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-1/lh_father-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-1/pose_father-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-1/pose_father-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-1/rh_father-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-1/rh_father-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-2/lh_father-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-2/pose_father-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-2/rh_father-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-3/lh_father-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-3/pose_father-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-3/rh_father-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-4/lh_father-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-4/pose_father-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-4/rh_father-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-5/lh_father-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-5/pose_father-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/father/father-5/rh_father-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-1/lh_hello-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-1/lh_hello-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-1/pose_hello-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-1/pose_hello-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-1/rh_hello-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-1/rh_hello-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-2/lh_hello-2.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-2/lh_hello-2.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-2/pose_hello-2.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-2/pose_hello-2.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-2/rh_hello-2.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-2/rh_hello-2.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-3/lh_hello-3.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-3/lh_hello-3.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-3/pose_hello-3.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-3/pose_hello-3.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-3/rh_hello-3.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-3/rh_hello-3.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-4/lh_hello-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-4/pose_hello-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-4/rh_hello-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-5/lh_hello-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-5/pose_hello-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-5/rh_hello-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-6/lh_hello-6.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-6/pose_hello-6.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-6/rh_hello-6.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-7/lh_hello-7.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-7/pose_hello-7.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-7/rh_hello-7.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-8/lh_hello-8.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-8/pose_hello-8.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-8/rh_hello-8.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-9/lh_hello-9.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-9/pose_hello-9.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/hello/hello-9/rh_hello-9.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-1/lh_mother-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-1/pose_mother-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-1/rh_mother-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-2/lh_mother-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-2/pose_mother-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-2/rh_mother-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-3/lh_mother-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-3/pose_mother-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-3/rh_mother-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-4/lh_mother-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-4/pose_mother-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/mother/mother-4/rh_mother-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-1/lh_my-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-1/pose_my-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-1/rh_my-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-2/lh_my-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-2/pose_my-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-2/rh_my-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-3/lh_my-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-3/pose_my-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/my/my-3/rh_my-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-1/lh_name-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-1/lh_name-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-1/pose_name-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-1/pose_name-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-1/rh_name-1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-1/rh_name-1.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-2/lh_name-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-2/pose_name-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-2/rh_name-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-3/lh_name-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-3/pose_name-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-3/rh_name-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-4/lh_name-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-4/pose_name-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-4/rh_name-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-5/lh_name-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-5/pose_name-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-5/rh_name-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-6/lh_name-6.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-6/pose_name-6.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-6/rh_name-6.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-7/lh_name-7.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-7/pose_name-7.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/name/name-7/rh_name-7.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-1/lh_whatsUp-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-1/pose_whatsUp-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-1/rh_whatsUp-1.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-2/lh_whatsUp-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-2/pose_whatsUp-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-2/rh_whatsUp-2.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-3/lh_whatsUp-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-3/pose_whatsUp-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-3/rh_whatsUp-3.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-4/lh_whatsUp-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-4/pose_whatsUp-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-4/rh_whatsUp-4.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-5/lh_whatsUp-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-5/pose_whatsUp-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/data/dataset/whatsUp/whatsUp-5/rh_whatsUp-5.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +154,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/EEG/Documents/GitHub/SeniorDesign/DTWpipe",
+    "last_opened_file_path": "C:/Users/DBAdmin/Documents/GitHub/SeniorDesign/DTWpipe",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DBAdmin\Documents\GitHub\SeniorDesign\DTWpipe" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
