@@ -4,12 +4,19 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
+<<<<<<< Updated upstream
           <list size="5">
+=======
+          <list size="4">
+>>>>>>> Stashed changes
             <item index="0" class="java.lang.String" itemvalue="opencv-python" />
             <item index="1" class="java.lang.String" itemvalue="torch" />
             <item index="2" class="java.lang.String" itemvalue="torchvision" />
             <item index="3" class="java.lang.String" itemvalue="torchaudio" />
+<<<<<<< Updated upstream
             <item index="4" class="java.lang.String" itemvalue="opencv-contrib-python" />
+=======
+>>>>>>> Stashed changes
           </list>
         </value>
       </option>

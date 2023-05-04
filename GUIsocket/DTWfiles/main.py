@@ -4,19 +4,29 @@ import os
 import pickle
 import pandas as pd
 
+<<<<<<< Updated upstream
 import re
 import imagiz
 import zlib
 import struct
 import time
 import io
+=======
+# import re
+# import imagiz
+# import zlib
+# import struct
+# import time
+# import io
+# import sys
+>>>>>>> Stashed changes
 
 from utils.dataset_utils import load_dataset, load_reference_signs
 from utils.mediapipe_utils import mediapipe_detection
 from sign_recorder import SignRecorder
 from webcam_manager import WebcamManager
 
-from imutils.video import VideoStream
+# from imutils.video import VideoStream
 import socket
 import time
 from threading import Thread
@@ -29,6 +39,7 @@ mp_hands = mp.solutions.hands
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # server_address = ('172.16.206.245', 1234)
 # sock.connect(server_address)
+<<<<<<< Updated upstream
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_address = ('172.16.206.245', 1234)
 sock.connect(server_address)
@@ -36,6 +47,26 @@ sock.setblocking(False)
 
 def main():
     # Create dataset of the videos where landmarks have not been extracted yet
+=======
+# sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_address = ('192.168.56.1', 1234)
+# sock.connect(server_address)
+# sock.setblocking(False)
+
+image_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_address = (str(socket.gethostbyname(socket.gethostname())), 1234)
+image_sock.connect(server_address)
+image_sock.setblocking(0)
+
+# text_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_address = ("172.16.206.245", 5678)
+# text_sock.connect(server_address)
+# text_sock.setblocking(False)
+
+def main():
+    global image_sock
+    # Create datasetOLD of the videos where landmarks have not been extracted yet
+>>>>>>> Stashed changes
     print("Reading Dataset...")
     dataset = load_dataset()
 

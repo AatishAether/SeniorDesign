@@ -42,7 +42,7 @@ class WebcamManager(object):
 
         # Update the frame
         cv2.circle(frame, (30, 30), 20, color, -1)
-        cv2.imshow("OpenCV Feed", frame)
+        # cv2.imshow("OpenCV Feed", frame)
 
     def draw_text(
         self,

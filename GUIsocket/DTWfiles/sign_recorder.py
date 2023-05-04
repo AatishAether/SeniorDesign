@@ -16,7 +16,7 @@ class SignRecorder(object):
         # List of results stored each frame
         self.recorded_results = []
 
-        # DataFrame storing the distances between the recorded sign & all the reference signs from the dataset
+        # DataFrame storing the distances between the recorded sign & all the reference signs from the datasetOLD
         self.reference_signs = reference_signs
         #self.recorded_sign = SignModel()
         

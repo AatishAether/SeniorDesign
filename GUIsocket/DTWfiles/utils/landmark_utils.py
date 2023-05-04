@@ -67,7 +67,7 @@ def save_landmarks_from_video(video_name):
         cap.release()
 
     # Create the folder of the sign if it doesn't exists
-    path = os.path.join("data", "dataset", sign_name)
+    path = os.path.join("data", "datasetOLD", sign_name)
     if not os.path.exists(path):
         os.mkdir(path)
 

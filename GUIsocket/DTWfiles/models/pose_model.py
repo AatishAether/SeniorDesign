@@ -29,7 +29,7 @@ class PoseModel(object):
 
     def _normalize_landmarks(self, landmarks):
         """
-        Normalizes dataset translation and scale
+        Normalizes datasetOLD translation and scale
         """
         # Take shoulder's position as origin
         shoulder_ = landmarks[self.landmark_names.index("shoulder")]
