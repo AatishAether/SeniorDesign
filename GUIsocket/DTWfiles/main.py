@@ -10,11 +10,13 @@ import zlib
 import struct
 import time
 import io
+import sys
 
 from utils.dataset_utils import load_dataset, load_reference_signs
 from utils.mediapipe_utils import mediapipe_detection
 from sign_recorder import SignRecorder
 from webcam_manager import WebcamManager
+from my_socket import SocketManager
 
 from imutils.video import VideoStream
 import socket
@@ -29,12 +31,23 @@ mp_hands = mp.solutions.hands
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # server_address = ('172.16.206.245', 1234)
 # sock.connect(server_address)
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('172.16.206.245', 1234)
-sock.connect(server_address)
-sock.setblocking(False)
+# sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_address = ('192.168.56.1', 1234)
+# sock.connect(server_address)
+# sock.setblocking(False)
+
+image_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_address = ("172.16.206.245", 1234)
+image_sock.connect(server_address)
+image_sock.setblocking(0)
+
+# text_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_address = ("172.16.206.245", 5678)
+# text_sock.connect(server_address)
+# text_sock.setblocking(False)
 
 def main():
+    global image_sock
     # Create dataset of the videos where landmarks have not been extracted yet
     print("Reading Dataset...")
     dataset = load_dataset()
@@ -57,6 +70,9 @@ def main():
     # Object that stores mediapipe results and computes sign similarities
     sign_recorder = SignRecorder(reference_signs)
 
+    # Object that sends images and text to the gui
+    my_socket = SocketManager()
+
     # Object that draws keypoints & displays results
     webcam_manager = WebcamManager()
 
@@ -66,8 +82,6 @@ def main():
     with mp.solutions.holistic.Holistic(
         min_detection_confidence=0.5, min_tracking_confidence=0.5
     ) as holistic:
-
-        count = 0
 
         while cap.isOpened():
             ret, frame = cap.read()
@@ -81,24 +95,19 @@ def main():
             # Update the frame (draw landmarks & display result)
             newFrame = webcam_manager.update(frame, results, sign_detected, is_recording)
 
+            my_socket.image_to_gui(image_sock, newFrame)
+            my_socket.text_to_file(sign_detected)
 
-            #cv2.imwrite("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend%d.png" % count, newFrame)
-            cv2.imwrite("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", newFrame)
+            Action = my_socket.new_action()
 
-            #f = open("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend" + str(count) + ".png", 'rb')
-            f = open("C:\\Users\\david\\Desktop\\DTWpipe\\frameToSend.png", 'rb')
-            image_data = f.read()
-            sock.sendall(image_data)
-            f.close()
 
-            count = count + 1
-
-            pressedKey = cv2.waitKey(1) & 0xFF
-            if pressedKey == ord("r"):  # Record pressing r
+            if Action == ("R"):  # Record pressing r
+                image_sock.setblocking(1)
                 sign_recorder.record()
-            elif pressedKey == ord("q"):  # Break pressing q
+                ret, frame = cap.read()
+            elif Action == ("Q"):  # Break pressing q
                 break
-            elif pressedKey == ord('p'): ##Print to file
+            elif Action == ('P'): ##Print to file
                 features = sign_recorder.recorded_sign.lh_embedding
                 #features = str(features).replace('[','')
                 #features = features.replace(']','')
@@ -107,6 +116,7 @@ def main():
                 #features = list(map(float,features))
                 with open("features6.pickle", "wb") as f:
                     pickle.dump(features,f)
+
             continue
 
         cap.release()
