@@ -27,6 +27,7 @@ class SignRecorder(object):
         """
 
         ##Reset distance to all signs to 0
+        print("STARTED RECORDING")
         self.reference_signs["distance"].values[:] = 0
         self.is_recording = True
 
@@ -45,10 +46,13 @@ class SignRecorder(object):
             else:
                 #Once we do, compute distances of ALL reference signs
                 self.compute_distances()
-                print(self.reference_signs)
+                print("AAAAA", self.reference_signs)
 
         if np.sum(self.reference_signs["distance"].values) == 0:
+            print("WARN: np.sum is zero")
             return "", self.is_recording
+
+        print("Predicted Sign: ")
         return self._get_sign_predicted(), self.is_recording
 
     def get_features(self,results):
@@ -87,7 +91,9 @@ class SignRecorder(object):
 
 
         # Reset variables
+        print(self.recorded_results)
         self.recorded_results = []
+
         self.is_recording = False
 
 
