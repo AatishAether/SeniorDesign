@@ -8,3 +8,5 @@ C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\De
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\Debug\SeniorDesignProject3.0.pdb
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.exe
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.pdb
+C:\Users\EEG\Documents\GitHub\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.exe
+C:\Users\EEG\Documents\GitHub\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.pdb

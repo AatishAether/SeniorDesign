@@ -110,6 +110,6 @@ class SignRecorder(object):
         sign_counter = Counter(sign_names).most_common()
 
         predicted_sign, count = sign_counter[0]
-        if count / batch_size < threshold:
-            return "Unknown Sign"
+        #if count / batch_size < threshold:
+        #    return "Unknown Sign"
         return sign_counter[0][0]

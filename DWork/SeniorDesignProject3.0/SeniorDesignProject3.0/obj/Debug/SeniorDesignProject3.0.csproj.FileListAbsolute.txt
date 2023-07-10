@@ -8,3 +8,14 @@ C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\De
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\Debug\SeniorDesignProject3.0.pdb
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.exe
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.pdb
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\Debug\SeniorDesignProject3.0.exe.config
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\Debug\SeniorDesignProject3.0.exe
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\Debug\SeniorDesignProject3.0.pdb
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.csproj.AssemblyReference.cache
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.csproj.SuggestedBindingRedirects.cache
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3._0.Form1.resources
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3._0.Properties.Resources.resources
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.csproj.GenerateResource.cache
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.csproj.CoreCompileInputs.cache
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.exe
+C:\Users\EEG\Documents\GitHub\SeniorDesign\DWork\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.pdb

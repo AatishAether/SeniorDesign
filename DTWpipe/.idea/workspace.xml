@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ee68a5d-23f7-42ab-a26c-ed6342c502f4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/SeniorDesign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/SeniorDesign.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helloTimeSeries.py" beforeDir="false" afterPath="$PROJECT_DIR$/helloTimeSeries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../referenceSigns.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../referenceSigns.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sign_recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/sign_recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/.vs/SeniorDesignProject3.0/FileContentIndex/3c944e28-1848-4ca7-8268-fa1cacb918b7.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/.vs/SeniorDesignProject3.0/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/.vs/SeniorDesignProject3.0/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/DTWpipe/action.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/DTWpipe/action.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/DTWpipe/frameToSend.png" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/DTWpipe/frameToSend.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/.vs/SeniorDesignProject3.0/FileContentIndex/c19b8ed6-a58a-4960-a7f8-7abd07611b9a.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/bin/Debug/SeniorDesignProject3.0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/bin/Debug/SeniorDesignProject3.0.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/bin/Debug/SeniorDesignProject3.0.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/bin/Debug/SeniorDesignProject3.0.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../DWork/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/DTWfiles/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/DTWfiles/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/SeniorDesignProject3.0/.vs/SeniorDesignProject3.0/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/SeniorDesignProject3.0/.vs/SeniorDesignProject3.0/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GUIsocket/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GUIsocket/SeniorDesignProject3.0/SeniorDesignProject3.0/obj/Debug/SeniorDesignProject3.0.csproj.FileListAbsolute.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +43,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/EEG/Documents/GitHub/SeniorDesign/DTWpipe",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/EEG/Documents/GitHub/SeniorDesign/DTWpipe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

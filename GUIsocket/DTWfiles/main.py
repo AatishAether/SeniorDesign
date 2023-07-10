@@ -5,7 +5,7 @@ import pickle
 import pandas as pd
 
 import re
-import imagiz
+# import imagiz
 import zlib
 import struct
 import time
