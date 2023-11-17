@@ -30,4 +30,4 @@ small a hand is) as well as that of the large datasets required for optimal resu
 captured by MediaPipe. These could be stored and labeled in a .csv or .xlsx file thus reducing the size of our training data on the disk from several gigabytes 
 in static images to under a hundred megabytes.  <br> 
 
-&emsp Considerations
+&emsp; Considerations
