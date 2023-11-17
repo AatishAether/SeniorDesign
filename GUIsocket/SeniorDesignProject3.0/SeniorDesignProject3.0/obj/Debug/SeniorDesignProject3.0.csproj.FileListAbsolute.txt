@@ -8,3 +8,10 @@ C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\De
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\bin\Debug\SeniorDesignProject3.0.pdb
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.exe
 C:\Users\david\source\repos\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.pdb
+Z:\Github\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.csproj.AssemblyReference.cache
+Z:\Github\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3._0.Form1.resources
+Z:\Github\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3._0.Properties.Resources.resources
+Z:\Github\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.csproj.GenerateResource.cache
+Z:\Github\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.csproj.CoreCompileInputs.cache
+Z:\Github\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.exe
+Z:\Github\SeniorDesign\GUIsocket\SeniorDesignProject3.0\SeniorDesignProject3.0\obj\Debug\SeniorDesignProject3.0.pdb
