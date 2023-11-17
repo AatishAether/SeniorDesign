@@ -31,5 +31,5 @@ captured by MediaPipe. These could be stored and labeled in a .csv or .xlsx file
 in static images to under a hundred megabytes.  <br> 
 
 &emsp; Considerations: <br>
-&emsp;&emsp; 1. Using a neural network as described above leads us to investigate how we could incorporate the time factor into our training set so as to be able to capture sequences of gestures. 
-&emsp;&emsp; 2. We would take into consideration the possibility of analyzing the training set and input data using non Euclidean rules, similar to DTW, in the hopes of improving our network. 
+&emsp;&emsp; 1. Using a neural network as described above leads us to investigate how we could incorporate the time factor into our training set so as to be able to capture sequences of gestures. <br>
+&emsp;&emsp; 2. We would take into consideration the possibility of analyzing the training set and input data using non Euclidean rules, similar to DTW, in the hopes of improving our network. <br>
