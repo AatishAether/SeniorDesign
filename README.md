@@ -32,4 +32,4 @@ in static images to under a hundred megabytes.  <br>
 
 &emsp; Considerations: <br>
 &emsp;&emsp; 1. Using a neural network as described above leads us to investigate how we could incorporate the time factor into our training set so as to be 
-&emsp;&emsp; able to capture sequences of gestures. 
+able to capture sequences of gestures. 
