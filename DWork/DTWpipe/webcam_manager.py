@@ -28,6 +28,7 @@ class WebcamManager(object):
     def update(
         self, frame: np.ndarray, results, sign_detected: str, is_recording: bool
     ):
+        print(f"update sign_detected from '{sign_detected}' to '{self.sign_detected}'")
         self.sign_detected = sign_detected
 
         # Draw landmarks
@@ -71,6 +72,7 @@ class WebcamManager(object):
         text_x, text_y = int((window_w - text_w) / 2), HEIGHT - text_h - offset
 
         cv2.rectangle(frame, (0, text_y - offset), (window_w, HEIGHT), bg_color, -1)
+        print("Translated Text Here: " + self.sign_detected, type(self.sign_detected))
         cv2.putText(
             frame,
             self.sign_detected,
