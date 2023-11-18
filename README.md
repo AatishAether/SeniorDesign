@@ -18,7 +18,7 @@ features are extracted and compared to the existing training set. This was very 
 because DTW can take in a set of video frames or images in sequence as the reference or training set and then compare that to another set of images 
 taken as input and it will compare these two in a non euclidean manner so that the length of the action you are looking to capture or the speed at 
 which it occurs is inconsequential. 
-### Recognition of Static Images Using a Convolutional Neural Network 
+### Recognition of Static Images Using a Convolutional Neural Network [Check Here](NN3/ReadMe.md)
 Convolutional neural networks are wuite good at classification tasks, not least of all, image classification tasks. Our group took it as a proof of 
 concept to work on a neural network which would function based off of static images. This has at least two major shortcomings when it comes to our 
 end goal in that this method is computationally expensive when all frames in a video sequence are considered, and as such, making this happen in 
