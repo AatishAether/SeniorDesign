@@ -24,7 +24,7 @@ concept to work on a neural network which would function based off of static ima
 end goal in that this method is computationally expensive when all frames in a video sequence are considered, and as such, making this happen in 
 real time is not as feasible. Secondly, the network itself does not take in time as a consideration and as such cannot identify sequences of actions. 
 A third significant shortcoming of this approach is that it requires training data in several resolutions and at various positions to be most effective. 
-### Current Work in Neural Networks 
+### Current Work in Neural Networks [Check Here](NN4/ReadMe.md)
 Seeking to resolve the problem of the excessively large datasets, we investigate the usage of MediaPipe to abstract the issue of both scaling (how large or 
 small a hand is) as well as that of the large datasets required for optimal results by instead training a neural network on the pertinent points in 3D space 
 captured by MediaPipe. These could be stored and labeled in a .csv or .xlsx file thus reducing the size of our training data on the disk from several gigabytes 
