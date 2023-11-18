@@ -7,7 +7,7 @@ The following methods will be used in coordination with the MediaPipe vectorizat
 goal there is to be able to translate pertinent information from the image or video stream into 
 usable but more spatially efficient data. The hands, in this case, are skeletonized and then 
 stored as vectors to be used in a variety of ways. 
-### Rule Based Recognition 
+### Rule Based Recognition [Check Here](handdetection/ReadMe.md)
 This is the "simplest" of the methods examined here, in a sense. It is tricky to code and finite in its scope, however, provides us with insight as 
 to the inner workings and mechanisms of models which are trained to predict the "outcome" of the signs given to them as input. In this method we 
 simply take the vectors we want and then define them ourselves as being a specific letter or not. 
