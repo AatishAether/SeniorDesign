@@ -38,7 +38,7 @@ mp_hands = mp.solutions.hands
 
 image_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_address = ("172.16.206.245", 1234)
-image_sock.connect(server_address)
+# image_sock.connect(server_address)
 image_sock.setblocking(0)
 
 # text_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
