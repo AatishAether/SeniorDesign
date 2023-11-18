@@ -11,7 +11,7 @@ stored as vectors to be used in a variety of ways.
 This is the "simplest" of the methods examined here, in a sense. It is tricky to code and finite in its scope, however, provides us with insight as 
 to the inner workings and mechanisms of models which are trained to predict the "outcome" of the signs given to them as input. In this method we 
 simply take the vectors we want and then define them ourselves as being a specific letter or not. 
-### Recognition of Dynamic Signs using DTW [Check Here](DTWPipe/ReadMe.md)
+### Recognition of Dynamic Signs using DTW [Check Here](SeniorDesign?DTWPipe/ReadMe.md)
 Dynamic Time Warping (DTW) relies on taking a set of data as reference for the action or activity that one would like to capture and then applying 
 certain knwoledge gleaned from this "training" set to any input that matches the requirements of the program. The input is taken and its pertinent 
 features are extracted and compared to the existing training set. This was very successful for our translation of moving gestures/signs. This is 
