@@ -21,9 +21,11 @@ doc/**/*.pdf
 venv/
 virtualenv/
 
-__pycache__/
+./**/__pycache__/
 
 *.swp
 *.zip
+
+.idea
 
 
