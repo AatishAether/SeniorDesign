@@ -1,0 +1,155 @@
+data = [
+            [results.multi_hand_landmarks[0].landmark[4].x, results.multi_hand_landmarks[0].landmark[4].y,
+             results.multi_hand_landmarks[0].landmark[4].z],
+            [results.multi_hand_landmarks[0].landmark[8].x, results.multi_hand_landmarks[0].landmark[8].y,
+             results.multi_hand_landmarks[0].landmark[8].z],
+            [results.multi_hand_landmarks[0].landmark[12].x, results.multi_hand_landmarks[0].landmark[12].y,
+             results.multi_hand_landmarks[0].landmark[12].z],
+            [results.multi_hand_landmarks[0].landmark[16].x, results.multi_hand_landmarks[0].landmark[16].y,
+             results.multi_hand_landmarks[0].landmark[16].z],
+            [results.multi_hand_landmarks[0].landmark[20].x, results.multi_hand_landmarks[0].landmark[20].y,
+             results.multi_hand_landmarks[0].landmark[20].z]
+
+        ]
+        #print(data)
+        if ((results.multi_hand_landmarks[0].landmark[4].x > results.multi_hand_landmarks[0].landmark[8].x) and (
+                results.multi_hand_landmarks[0].landmark[8].x > results.multi_hand_landmarks[0].landmark[12].x) and (
+                results.multi_hand_landmarks[0].landmark[12].x > results.multi_hand_landmarks[0].landmark[16].x) and (
+                results.multi_hand_landmarks[0].landmark[16].x > results.multi_hand_landmarks[0].landmark[20].x)):
+            if ((results.multi_hand_landmarks[0].landmark[4].y < results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y < results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y > results.multi_hand_landmarks[0].landmark[20].y)):
+                if ((results.multi_hand_landmarks[0].landmark[4].z < results.multi_hand_landmarks[0].landmark[8].z) and (
+                        results.multi_hand_landmarks[0].landmark[8].z > results.multi_hand_landmarks[0].landmark[12].z) and (
+                        results.multi_hand_landmarks[0].landmark[12].z > results.multi_hand_landmarks[0].landmark[16].z) and (
+                        results.multi_hand_landmarks[0].landmark[16].z > results.multi_hand_landmarks[0].landmark[20].z)):
+                    print("A")
+                else:
+                    print("Y")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y < results.multi_hand_landmarks[0].landmark[20].y)):
+                print("F")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y < results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y > results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y > results.multi_hand_landmarks[0].landmark[20].y)):
+                print("I")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y < results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y > results.multi_hand_landmarks[0].landmark[20].y)):
+                print("L")
+
+        elif ((results.multi_hand_landmarks[0].landmark[4].x < results.multi_hand_landmarks[0].landmark[8].x) and (
+                results.multi_hand_landmarks[0].landmark[8].x > results.multi_hand_landmarks[0].landmark[12].x) and (
+                results.multi_hand_landmarks[0].landmark[12].x > results.multi_hand_landmarks[0].landmark[16].x) and (
+                results.multi_hand_landmarks[0].landmark[16].x > results.multi_hand_landmarks[0].landmark[20].x)):
+            if ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y > results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y > results.multi_hand_landmarks[0].landmark[20].y)):
+                print("E")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y < results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y > results.multi_hand_landmarks[0].landmark[20].y)):
+                print("N")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y < results.multi_hand_landmarks[0].landmark[20].y)):
+                if ((results.multi_hand_landmarks[0].landmark[4].z < results.multi_hand_landmarks[0].landmark[8].z) and (
+                        results.multi_hand_landmarks[0].landmark[8].z > results.multi_hand_landmarks[0].landmark[12].z) and (
+                        results.multi_hand_landmarks[0].landmark[12].z > results.multi_hand_landmarks[0].landmark[16].z) and (
+                        results.multi_hand_landmarks[0].landmark[16].z < results.multi_hand_landmarks[0].landmark[20].z)):
+                    print("B")
+                elif ((results.multi_hand_landmarks[0].landmark[4].z > results.multi_hand_landmarks[0].landmark[8].z) and (
+                        results.multi_hand_landmarks[0].landmark[8].z < results.multi_hand_landmarks[0].landmark[12].z) and (
+                        results.multi_hand_landmarks[0].landmark[12].z < results.multi_hand_landmarks[0].landmark[16].z) and (
+                        results.multi_hand_landmarks[0].landmark[16].z > results.multi_hand_landmarks[0].landmark[20].z)):
+                    print("Q")
+                else:
+                    print("U")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y < results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y < results.multi_hand_landmarks[0].landmark[20].y)):
+                if ((results.multi_hand_landmarks[0].landmark[4].z > results.multi_hand_landmarks[0].landmark[8].z) and (
+                        results.multi_hand_landmarks[0].landmark[8].z < results.multi_hand_landmarks[0].landmark[12].z) and (
+                        results.multi_hand_landmarks[0].landmark[12].z < results.multi_hand_landmarks[0].landmark[16].z) and (
+                        results.multi_hand_landmarks[0].landmark[16].z > results.multi_hand_landmarks[0].landmark[20].z)):
+                    print("G")
+                elif ((results.multi_hand_landmarks[0].landmark[4].z < results.multi_hand_landmarks[0].landmark[8].z) and (
+                        results.multi_hand_landmarks[0].landmark[8].z > results.multi_hand_landmarks[0].landmark[12].z) and (
+                        results.multi_hand_landmarks[0].landmark[12].z > results.multi_hand_landmarks[0].landmark[16].z) and (
+                        results.multi_hand_landmarks[0].landmark[16].z > results.multi_hand_landmarks[0].landmark[20].z)):
+                    print("O")
+                else:
+                    print("X")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y < results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y < results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y > results.multi_hand_landmarks[0].landmark[20].y)):
+                if ((results.multi_hand_landmarks[0].landmark[4].z < results.multi_hand_landmarks[0].landmark[8].z) and (
+                        results.multi_hand_landmarks[0].landmark[8].z > results.multi_hand_landmarks[0].landmark[12].z) and (
+                        results.multi_hand_landmarks[0].landmark[12].z > results.multi_hand_landmarks[0].landmark[16].z) and (
+                        results.multi_hand_landmarks[0].landmark[16].z > results.multi_hand_landmarks[0].landmark[20].z)):
+                    print("M")
+                else:
+                    print("S")
+
+        elif ((results.multi_hand_landmarks[0].landmark[4].x > results.multi_hand_landmarks[0].landmark[8].x) and (
+                results.multi_hand_landmarks[0].landmark[8].x < results.multi_hand_landmarks[0].landmark[12].x) and (
+                results.multi_hand_landmarks[0].landmark[12].x > results.multi_hand_landmarks[0].landmark[16].x) and (
+                results.multi_hand_landmarks[0].landmark[16].x > results.multi_hand_landmarks[0].landmark[20].x)):
+            if ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y < results.multi_hand_landmarks[0].landmark[20].y)):
+                print("C")
+            else:
+                print("D")
+
+        elif ((results.multi_hand_landmarks[0].landmark[4].x < results.multi_hand_landmarks[0].landmark[8].x) and (
+                results.multi_hand_landmarks[0].landmark[8].x < results.multi_hand_landmarks[0].landmark[12].x) and (
+                results.multi_hand_landmarks[0].landmark[12].x > results.multi_hand_landmarks[0].landmark[16].x) and (
+                results.multi_hand_landmarks[0].landmark[16].x > results.multi_hand_landmarks[0].landmark[20].x)):
+            if ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y < results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y < results.multi_hand_landmarks[0].landmark[20].y)):
+                print("H")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y < results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y < results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y > results.multi_hand_landmarks[0].landmark[20].y)):
+                print("P")
+            elif ((results.multi_hand_landmarks[0].landmark[4].y > results.multi_hand_landmarks[0].landmark[8].y) and (
+                    results.multi_hand_landmarks[0].landmark[8].y > results.multi_hand_landmarks[0].landmark[12].y) and (
+                    results.multi_hand_landmarks[0].landmark[12].y < results.multi_hand_landmarks[0].landmark[16].y) and (
+                    results.multi_hand_landmarks[0].landmark[16].y < results.multi_hand_landmarks[0].landmark[20].y)):
+                print("R")
+
+        elif ((results.multi_hand_landmarks[0].landmark[4].x < results.multi_hand_landmarks[0].landmark[8].x) and (
+                results.multi_hand_landmarks[0].landmark[8].x > results.multi_hand_landmarks[0].landmark[12].x) and (
+                results.multi_hand_landmarks[0].landmark[12].x < results.multi_hand_landmarks[0].landmark[16].x) and (
+                results.multi_hand_landmarks[0].landmark[16].x > results.multi_hand_landmarks[0].landmark[20].x)):
+            if ((results.multi_hand_landmarks[0].landmark[4].z > results.multi_hand_landmarks[0].landmark[12].z) and (
+                    results.multi_hand_landmarks[0].landmark[8].z > results.multi_hand_landmarks[0].landmark[12].z) and (
+                    results.multi_hand_landmarks[0].landmark[12].z < results.multi_hand_landmarks[0].landmark[16].z) and (
+                    results.multi_hand_landmarks[0].landmark[16].z > results.multi_hand_landmarks[0].landmark[20].z)):
+                print("K")
+            elif ((results.multi_hand_landmarks[0].landmark[4].z < results.multi_hand_landmarks[0].landmark[12].z) and (
+                    results.multi_hand_landmarks[0].landmark[8].z > results.multi_hand_landmarks[0].landmark[12].z) and (
+                    results.multi_hand_landmarks[0].landmark[12].z < results.multi_hand_landmarks[0].landmark[16].z) and (
+                    results.multi_hand_landmarks[0].landmark[16].z > results.multi_hand_landmarks[0].landmark[20].z)):
+                print("V")
+
+        elif ((results.multi_hand_landmarks[0].landmark[4].x < results.multi_hand_landmarks[0].landmark[8].x) and (
+                results.multi_hand_landmarks[0].landmark[8].x > results.multi_hand_landmarks[0].landmark[12].x) and (
+                results.multi_hand_landmarks[0].landmark[12].x > results.multi_hand_landmarks[0].landmark[16].x) and (
+                results.multi_hand_landmarks[0].landmark[16].x < results.multi_hand_landmarks[0].landmark[20].x)):
+            print("W")
